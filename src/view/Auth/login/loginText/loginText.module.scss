@@ -1,0 +1,59 @@
+@import '../../../../assets/styles/mediaquery.scss';
+
+
+$lightOrange: #ffb901;
+
+.leftSection {
+    .logo {
+        margin-bottom: 120px;
+        cursor: pointer;
+
+        @include mediaForMobile {
+            width: 130px;
+            height: 40px;
+        }
+    }
+
+    .loginText {
+        @include FontStyle("Helvetica Condensed", italic, 700, 72px, 75px);
+
+        span {
+            color: $lightOrange;
+        }
+
+        p {
+            color: #fff;
+            font-family: "Helvetica Condensed";
+            margin: 0;
+        }
+
+        @include mediaForMobile {
+            font-size: 30px;
+        }
+    }
+
+    @include mediaForSmallLaptop {
+        text-align: center;
+
+        .logo {
+            width: 255px;
+            height: 80px;
+            margin-bottom: 30px;
+        }
+
+        .loginText {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 380px;
+            flex-wrap: wrap;
+            font-size: 36px;
+            line-height: 40px;
+            margin-bottom: 50px;
+
+            p {
+                margin-right: 10px;
+            }
+        }
+    }
+}

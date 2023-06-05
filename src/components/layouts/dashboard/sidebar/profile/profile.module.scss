@@ -1,0 +1,41 @@
+.profile {
+    min-height: var(--header-height);
+}
+
+.imagewrap {
+    max-width: 70px;
+    max-height: 70px;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+    animation: showProfile 2s;
+}
+
+.name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+    animation: showProfile 2s;
+}
+
+.role {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    width: 100%;
+    animation: showProfile 2s;
+}
+
+@keyframes showProfile {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 9;
+    }
+}

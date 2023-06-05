@@ -1,0 +1,18 @@
+.sidebar {
+    max-width: var(--sidebar-width);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.collapse {
+    max-width: var(--mini-sidebar-width);
+
+    a {
+        padding: 0;
+
+        svg {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}

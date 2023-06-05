@@ -1,0 +1,29 @@
+/* IMPORTANT NOTE: This mixin are use for media query.
+ when developer need to use media query use this mixin. */
+
+@mixin mediaForSmallLaptop($width: 1024px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mediaForTablet($width: 768px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mediaForMobile($width: 576px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+
+@mixin FontStyle($val1, $val2, $val3, $val4, $val5) {
+  font-family: var(--font-roboto);
+  font-style: $val2;
+  font-weight: $val3;
+  font-size: $val4;
+  line-height: $val5;
+}

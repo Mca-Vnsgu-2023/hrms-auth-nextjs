@@ -1,0 +1,72 @@
+@import "./imports.scss";
+
+:root {
+  // theme color
+  --primary-color: #02A4EF;
+  --secondary-color: #48505F;
+  --gray-color: #666666;
+  --danger-color: #FFAEAE;
+
+  --main-bg-color: #F1F2F7;
+  --bg-dark-color: #353C48;
+  --bg-gary-color: #CCCCCC;
+  // font color
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  // theme size
+  --container-width: 1920px;
+  --sidebar-width: 230px;
+  --mini-sidebar-width: 55px;
+  --header-height: 60px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  // for dark theme
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-roboto);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+div.dark {
+  --foreground-color: var(--main-bg-color);
+  --background-color: #1B2430;
+  // color: var(--primary-color);
+  background: var(--background-color);
+  color-scheme: dark;
+}
+
+div.light{
+  --foreground-color: var(--primary-color);
+  --background-color: var( --main-bg-color);
+  // color: var(--foreground-color);
+  background: var(--background-color);
+  color-scheme: light;
+}

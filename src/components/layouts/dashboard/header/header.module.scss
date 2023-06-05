@@ -1,0 +1,46 @@
+.headerwarp {
+    max-height: var(--header-height);
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--bg-dark-color);
+    color: var(--color-white);
+
+    .sidebartoggle {
+        height: var(--header-height);
+        width: var(--header-height);
+        background-color: var(--secondary-color);
+    }
+
+    .notification {
+        height: 32px;
+        width: 32px;
+        margin-top: 10px;
+        background-color: var(--secondary-color);
+    }
+
+    span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        margin: 0 20px;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    .dropdownToggle {
+        border: none;
+        background: none;
+
+        &:active {
+            border: none;
+            background: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+}

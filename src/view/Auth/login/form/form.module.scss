@@ -1,0 +1,155 @@
+@import "../../../../assets/styles/mediaquery.scss";
+
+$loginFormheight: 650px;
+$loginFormheight-sm: 380px;
+
+$darkBlue: #3f51b5;
+$skyBlue: #f6f8ff;
+$lightOrange: #ffb901;
+$themeBlack: #353c48;
+$themeGrey: #bbc2d9;
+
+.loginForm {
+    background: #fff;
+    position: absolute;
+    top: -25px;
+    right: 80px;
+    padding: 138px 110px;
+    height: $loginFormheight;
+    max-width: 620px;
+    width: 100%;
+
+    &::after {
+        content: "";
+        width: 619px;
+        height: 5px;
+        position: absolute;
+        background: $darkBlue;
+        filter: blur(10px);
+        bottom: -0px;
+        left: 0;
+        z-index: -1;
+    }
+
+    .title {
+        @include FontStyle(var(--font-roboto), normal, 700, 48px, 50px);
+        color: $themeBlack;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .loginButton {
+        margin-top: 20px;
+        max-width: 400px;
+        width: 100%;
+        height: 55px;
+        background: $darkBlue;
+        border-radius: 5px;
+        border: none;
+        @include FontStyle(var(--font-roboto), normal, 700, 22px, 24px);
+        color: #fff;
+
+        @include mediaForMobile {
+            height: 50px;
+            margin-top: 0;
+        }
+    }
+
+    .loginButton.btnDisabled {
+        background: #dddddd;
+        position: relative;
+
+        .smallLoader {
+            position: absolute;
+            top: 29%;
+            right: 15px;
+            width: 25px;
+            height: 25px;
+
+            @include mediaForMobile {
+                top: 27%;
+            }
+        }
+    }
+
+    .InputWrap {
+        margin-bottom: 20px;
+    }
+
+    .loginInput {
+        label {
+            @include FontStyle(var(--font-roboto), normal, 400, 14px, 16px);
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .InputWithImage {
+            max-width: 400px;
+            width: 100%;
+            height: 55px;
+            background: #f6f8ff;
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+
+            border: 1px solid #dde8fd;
+            position: relative;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            input {
+                background: #f6f8ff;
+                border: none;
+                height: 100%;
+                width: 100%;
+                padding: 18px 20px;
+                padding-right: 50px;
+                font-family: var(--font-roboto);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                outline: none;
+                border-radius: 5px;
+            }
+
+            svg {
+                position: absolute;
+                right: 15px;
+                cursor: pointer;
+            }
+
+            @include mediaForMobile {
+                height: 45px;
+
+                input {
+                    padding: 5px 50px 5px 20px;
+                }
+            }
+        }
+    }
+
+    @include mediaForSmallLaptop {
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 80%;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    @include mediaForMobile {
+        padding: 35px 20px;
+        width: 85%;
+        max-height: $loginFormheight-sm;
+
+        .title {
+            margin-bottom: 25px;
+            font-size: 22px;
+            line-height: 24px;
+        }
+    }
+}
